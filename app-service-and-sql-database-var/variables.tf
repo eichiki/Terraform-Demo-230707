@@ -1,14 +1,14 @@
 variable "resource-group-name" {
-  default     = "terraform-resource-group"
+  default     = "PSM-TEST-TF"
   description = "The prefix used for all resources in this example"
 }
 
 variable "app-service-name" {
-  default     = "terraform-app-service"
+  default     = "PSM-TEST-TF-AP"
   description = "The name of the Web App"
 }
 
 variable "location" {
-  default     = "West Europe"
+  default     = "Korea Cental"
   description = "The Azure location where all resources in this example should be created"
 }
