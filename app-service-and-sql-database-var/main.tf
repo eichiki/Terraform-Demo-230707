@@ -4,7 +4,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+      version = "=>3.0.0"
     }
   }
 }
@@ -15,7 +15,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "RG-Terraform" {
-  name     = "terraform-resource-group"
+  name     = "PSM-ASP-TEST-RG"
   location = "West Europe"
 }
 
