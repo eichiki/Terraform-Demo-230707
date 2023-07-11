@@ -54,8 +54,8 @@ resource "azurerm_app_service" "AS-Terraform" {
 
 resource "azurerm_sql_server" "test" {
   name                         = "terraform-sqlserver"
-  resource_group_name          = azurerm_resource_group.RG-Terraform.name
   location                     = azurerm_resource_group.RG-Terraform.location
+  resource_group_name          = azurerm_resource_group.RG-Terraform.name  
   version                      = "12.0"
   administrator_login          = "vmadmin"
   administrator_login_password = "Qkrtmdtn12#$"
@@ -63,8 +63,8 @@ resource "azurerm_sql_server" "test" {
 
 resource "azurerm_sql_database" "test" {
   name                = "terraform-sqldatabase"
-  resource_group_name = azurerm_resource_group.RG-Terraform.name
-  location            = azurerm_resource_group.RG-Terraform.location
+  location            = azurerm_resource_group.RG-Terraform.location  
+  resource_group_name = azurerm_resource_group.RG-Terraform.name  
   server_name         = azurerm_sql_server.test.name
 
   tags = {
